@@ -3,7 +3,15 @@ body{
     background-attachment: fixed;
 }
 
-a:hover{
+.logoNavbar{
+    width: 6em;
+}
+
+.nav-link{
+    font-size: 0.8rem;
+}
+
+.nav-link:hover{
     color: rgb(224, 119, 32) !important;
 }
 
