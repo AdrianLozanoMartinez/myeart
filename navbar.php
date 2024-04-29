@@ -29,10 +29,10 @@
     </div>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <button class="nav-link text-light" aria-current="page" href="#">LOGIN</button>
+          <button type="button" class="btn text-light loginButton" href="#">LOGIN</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link text-light" href="#">REGISTRAR</button>
+          <button type="button" class="btn text-light loginButton" href="#">REGISTRAR</button>
         </li>
       </ul>
   </div>
