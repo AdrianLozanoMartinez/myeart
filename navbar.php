@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
   <div class="container-fluid">
     <a class="navbar-brand" href="#"><img src="image/logo.svg"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,19 +7,19 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">OBRAS</a>
+          <a class="nav-link text-light" aria-current="page" href="#">OBRAS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">ARTISTAS</a>
+          <a class="nav-link text-light" href="#">ARTISTAS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">EVENTOS</a>
+          <a class="nav-link text-light" aria-current="page" href="#">EVENTOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="#">MI COMUNIDAD</a>
+          <a class="nav-link text-light" href="#">MI COMUNIDAD</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">COLECTIVOS</a>
+          <a class="nav-link text-light" aria-current="page" href="#">COLECTIVOS</a>
         </li>
       </ul>
       <!-- <form class="d-flex" role="search">
@@ -29,10 +29,10 @@
     </div>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <button class="nav-link active" aria-current="page" href="#">LOGIN</button>
+          <button class="nav-link text-light" aria-current="page" href="#">LOGIN</button>
         </li>
         <li class="nav-item">
-          <button class="nav-link active" href="#">REGISTRAR</button>
+          <button class="nav-link text-light" href="#">REGISTRAR</button>
         </li>
       </ul>
   </div>
