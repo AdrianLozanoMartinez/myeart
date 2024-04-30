@@ -29,12 +29,20 @@ body{
     background-color: rgb(197, 143, 102) !important;
 }
 
+.fa-circle-arrow-left{
+    color: rgb(178 121 76/1);
+}
+
+.fa-circle-arrow-left:hover{
+    color: rgb(197, 143, 102);
+}
+
 .containerPolicy{
     background-color: white;
     width: 90em;
     padding: 5em;
     padding-top: 1em;
-    margin-left: 1em;
+    margin-left: 2em;
 }
 
 .policySmall{
