@@ -1,6 +1,7 @@
 body{
     background-image: url('image/bg-woman.webp');
     background-attachment: fixed;
+    background-position: top 90% right 210em;
 }
 
 .logoNavbar{
@@ -8,15 +9,24 @@ body{
 }
 
 .nav-link{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
 }
 
 .nav-link:hover{
     color: rgb(224, 119, 32) !important;
 }
 
-.loginButton{
+.loginButton {
     background-color: rgb(178 121 76/1) !important;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 1em;
+    letter-spacing: 0.2rem;
+}
+  
+.loginButton:hover{
+    background-color: rgb(197, 143, 102) !important;
 }
 
 footer{

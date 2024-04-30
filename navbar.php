@@ -7,32 +7,28 @@
     <div class="collapse navbar-collapse ms-5" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link fw-bold text-light" aria-current="page" href="#">OBRAS</a>
+          <a class="nav-link fw-bold text-light ms-5" aria-current="page" href="obras.php">OBRAS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-light" href="#">ARTISTAS</a>
+          <a class="nav-link fw-bold text-light ms-3" aria-current="page" href="artistas.php">ARTISTAS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-light" aria-current="page" href="#">EVENTOS</a>
+          <a class="nav-link fw-bold text-light ms-3" aria-current="page" href="eventos.php">EVENTOS</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-light" href="#">MI COMUNIDAD</a>
+          <a class="nav-link fw-bold text-light ms-3" aria-current="page" href="miComunidad.php">MI COMUNIDAD</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold text-light" aria-current="page" href="#">COLECTIVOS</a>
+          <a class="nav-link fw-bold text-light ms-3" aria-current="page" href="colectivos.php">COLECTIVOS</a>
         </li>
       </ul>
-      <!-- <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </form> -->
     </div>
     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <button type="button" class="btn text-light loginButton" href="#">LOGIN</button>
+          <a href="login.php"><button type="button" class="btn text-light loginButton me-1">LOGIN</button></a>
         </li>
-        <li class="nav-item">
-          <button type="button" class="btn text-light loginButton" href="#">REGISTRAR</button>
+        <li class="nav-item me-5">
+          <a href="registrar.php"><button type="button" class="btn text-light loginButton me-5">REGISTRAR</button></a>
         </li>
       </ul>
   </div>
