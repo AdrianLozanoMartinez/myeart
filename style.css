@@ -29,6 +29,23 @@ body{
     background-color: rgb(197, 143, 102) !important;
 }
 
+.containerPolicy{
+    background-color: white;
+    width: 90em;
+    padding: 5em;
+    padding-top: 1em;
+    margin-left: 1em;
+}
+
+.policySmall{
+    color: rgb(155, 155, 153);
+    font-weight: 600;
+}
+
+.separateFirstLetter{
+    text-indent: 3rem;  
+}
+
 footer{
     width: 100%;
     background-color: white;
