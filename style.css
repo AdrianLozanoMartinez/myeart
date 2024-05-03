@@ -27,8 +27,9 @@ body{
     letter-spacing: 0.2rem;
 }
   
-.loginButton:hover{
+.loginButton:hover, .buttonSupport:hover{
     background-color: rgb(197, 143, 102) !important;
+    border-color: rgb(197, 143, 102);
 }
 
 .fa-circle-arrow-left{
@@ -89,12 +90,14 @@ footer{
     margin: 2em;
 }
 
-.buttoSupport{
+.buttonSupport{
     margin-top: 1em;
     padding: 0.5em;
     padding-left: 1.5em;
     padding-right: 1.5em;
     font-weight: bold;
+    background-color: rgb(178 121 76/1);
+    border-color: rgb(178 121 76/1);
 }
 
 .separate{

@@ -24,7 +24,7 @@
                     <textarea class="form-control inputSupport" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe tu mensaje"></textarea>
                 </div>
                 <div class="text-center"> 
-                    <button type="submit" class="btn btn-dark buttoSupport">Enviar</button>
+                    <button type="submit" class="btn btn-dark buttonSupport">Enviar</button>
                 </div>
             </form>
         </div>
