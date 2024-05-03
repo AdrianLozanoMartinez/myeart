@@ -44,7 +44,6 @@ body{
     width: 100%;
     padding: 5em;
     padding-top: 1em;
-    /* margin-left: 2em; */
 }
 
 .policySmall{
@@ -79,4 +78,33 @@ footer{
 
 #cards{
     grid-area: cards;
+}
+
+#support{
+    background-color: white;
+    box-shadow:10px 10px 30px rgba(0, 0, 0, 0.8);
+    width: 100%;
+    padding: 5em;
+    padding-top: 2em;
+    margin: 2em;
+}
+
+.buttoSupport{
+    margin-top: 1em;
+    padding: 0.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    font-weight: bold;
+}
+
+.separate{
+    margin-top: 1em;
+}
+
+.inputSupport{
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.inputSupport:hover {
+    box-shadow: 2px 2px 2px 1px rgb(197, 143, 102);
 }
