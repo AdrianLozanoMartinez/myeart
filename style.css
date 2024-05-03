@@ -41,10 +41,10 @@ body{
 
 .containerPolicy{
     background-color: white;
-    width: 90em;
+    width: 100%;
     padding: 5em;
     padding-top: 1em;
-    margin-left: 2em;
+    /* margin-left: 2em; */
 }
 
 .policySmall{
