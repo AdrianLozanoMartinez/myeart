@@ -1,4 +1,37 @@
-<?php include 'navbar.php' ?>
+<?php
+require 'navbar.php'; 
+
+try {
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $id = $_POST['id'];
+        $nameSupport = $_POST['nameSupport'];
+        $emailSupport = $_POST['emailSupport'];
+        $messageSupport = $_POST['messageSupport'];
+
+        $sql = "INSERT INTO support(id, fullName, email, messages) 
+                        values('$id', '$nameSupport', '$emailSupport', '$messageSupport');"; 
+        $supports = $bd->query($sql);
+
+        if ($supports->rowCount() > 0) {
+            echo "<script> 
+                Swal.fire({
+                    title: '<h1>Mensaje enviado</h1>',
+                    showConfirmButton: false,  
+                });
+            </script>";
+            // Redireccionamos después de un breve retraso
+            header('Refresh: 1.5; URL=index.php');
+            exit;
+        } else {
+            echo "Envío del mensaje incorrecto";
+            print_r($bd->errorinfo());
+        }
+    }
+} catch (PDOException $e) {
+    echo 'Error con la base de datos: ' . $e->getMessage();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,18 +43,19 @@
         <div id="support">
             <h2>¡Contáctanos!</h2>
             <p>Completa el siguiente formulario y nos pondremos en contacto contigo.</p>
-            <form>
+            <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="form-group separate">
-                    <label for="formGroupExampleInput">Nombre completo</label>
-                    <input type="text" class="form-control inputSupport" id="formGroupExampleInput" placeholder="Nombre completo">
+                    <label for="nameSupport">Nombre completo</label>
+                    <input name="nameSupport" type="text" class="form-control inputSupport" id="nameSupport" placeholder="Nombre completo">
                 </div>
                 <div class="form-group separate">
-                    <label for="formGroupExampleInput2">Email</label>
-                    <input type="text" class="form-control inputSupport" id="formGroupExampleInput2" placeholder="Email">
+                    <label for="emailSupport">Email</label>
+                    <input name="emailSupport" type="text" class="form-control inputSupport" id="emailSupport" placeholder="Email">
                 </div>
                 <div class="form-group separate">
-                    <label for="exampleFormControlTextarea1">Mensaje</label>
-                    <textarea class="form-control inputSupport" id="exampleFormControlTextarea1" rows="3" placeholder="Escribe tu mensaje"></textarea>
+                    <label for="messageSupport">Mensaje</label>
+                    <textarea name="messageSupport" class="form-control inputSupport" id="messageSupport" rows="3" placeholder="Escribe tu mensaje"></textarea>
                 </div>
                 <div class="text-center"> 
                     <button type="submit" class="btn btn-dark buttonSupport">Enviar</button>
