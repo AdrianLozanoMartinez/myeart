@@ -39,7 +39,7 @@ try {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-    <div class="containerPolicy">
+    <div class="containerSupport">
         <div id="support">
             <h2>¡Contáctanos!</h2>
             <p>Completa el siguiente formulario y nos pondremos en contacto contigo.</p>
@@ -51,7 +51,7 @@ try {
                 </div>
                 <div class="form-group separate">
                     <label for="emailSupport">Email</label>
-                    <input name="emailSupport" type="text" class="form-control inputSupport" id="emailSupport" placeholder="Email">
+                    <input name="emailSupport" type="email" class="form-control inputSupport" id="emailSupport" placeholder="Email">
                 </div>
                 <div class="form-group separate">
                     <label for="messageSupport">Mensaje</label>

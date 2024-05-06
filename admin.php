@@ -13,7 +13,7 @@
         <?php 
         if ($supports->rowCount() > 0) {
             foreach ($supports as $key => $support) {
-                echo $support['fullName']."<br>";
+                echo $support['fullName']." - ". $support['email']." - ". $support['messages'];
             }
         } else {
             echo "No se encontraron resultados.";

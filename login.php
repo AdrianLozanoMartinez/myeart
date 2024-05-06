@@ -1,15 +1,35 @@
-<?php include 'navbar.php' ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleLogin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 <body>
-    <div class="containerPolicy">
-        Login - EN CONSTRUCCIÓN
+    <div class="containerLogin">
+        <div id="login">
+            <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+                <input type="hidden" name="id" value="<?php echo $id; ?>">
+                <span id="arrowLeft"><i class="fa-solid fa-arrow-left"></i></span>
+                <div class="form-group separate">
+                    <div class="form-group separate">
+                        <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
+                        <input name="emailLogin" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email">
+                        <span id="passwordIcon"><i class="fa-solid fa-key"></i></span>
+                        <input name="passLogin" type="password" class="form-control inputLogin" id="passLogin" placeholder="Contraseña" minlength="6">
+                    </div>
+                </div>
+                <div class="text-center"> 
+                    <button type="submit" class="btn btn-dark buttonLogin">Iniciar sección</button>
+                </div>
+            </form>
+        </div>
     </div>
     <a href="admin.php">Administrador (Solo para probar, luego se cambia)</a>
-    <?php include 'footer.html' ?>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
 </html>

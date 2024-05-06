@@ -18,16 +18,8 @@ body{
 .nav-link:hover, a:hover {
     color: rgb(224, 119, 32) !important;
 }
-
-.loginButton {
-    background-color: rgb(178 121 76/1) !important;
-    font-size: 0.7rem;
-    font-weight: bold;
-    padding: 1em;
-    letter-spacing: 0.2rem;
-}
   
-.loginButton:hover, .buttonSupport:hover{
+.buttonSupport:hover{
     background-color: rgb(197, 143, 102) !important;
     border-color: rgb(197, 143, 102);
 }
@@ -40,7 +32,7 @@ body{
     color: rgb(197, 143, 102);
 }
 
-.containerPolicy{
+.containerPolicy, .containerSupport{
     background-color: white;
     width: 100%;
     padding: 5em;
@@ -90,7 +82,7 @@ footer{
     margin: 2em;
 }
 
-.buttonSupport{
+.buttonSupport {
     margin-top: 1em;
     padding: 0.5em;
     padding-left: 1.5em;
@@ -99,6 +91,7 @@ footer{
     background-color: rgb(178 121 76/1);
     border-color: rgb(178 121 76/1);
 }
+
 
 .separate{
     margin-top: 1em;

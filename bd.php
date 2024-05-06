@@ -1,7 +1,13 @@
 <?php
+//Local
 $conexion = 'mysql:dbname=myeart2;host=127.0.0.1';  
 $user = 'root';
 $pass = '';
+
+//Web
+/*$conexion = 'mysql:dbname=myeart2;host=127.0.0.1';  
+$user = 'myeart';
+$pass = '2Oz0_t&*tB';*/
 
 try {
     $bd = new PDO($conexion, $user, $pass);
