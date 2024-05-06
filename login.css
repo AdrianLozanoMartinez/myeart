@@ -57,7 +57,7 @@ body {
 }
 
 .inputLogin::placeholder, #emailIcon, #passwordIcon {
-    color: rgb(219, 219, 219);
+    color: rgb(184, 183, 183);
     transition: color 0.3s ease;
 }
 
@@ -67,14 +67,24 @@ body {
 }
 
 #emailIcon{
-    top: 15.5em;
+    top: 17em;
 }
 
 #passwordIcon{
-    top: 19.5em;
+    top: 21em;
 }
 
 #arrowLeft{
     color: rgb(178 121 76/1);
-    padding-top: -20em;
+    margin-left: -2em;
+}
+
+#forget{
+    margin-left: 3.5em;
+    color: white;
+    text-decoration: none;
+}
+
+#forget:hover{
+    color: rgb(197, 143, 102);
 }
