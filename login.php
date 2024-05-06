@@ -1,3 +1,46 @@
+<?php
+    include 'bd.php';
+
+    $email = "";
+
+    try {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            
+            $email = $_POST['email'];
+            $pass = $_POST['pass'];
+
+            //SIN ENCRIPTAR CONTRASEÑA
+            $sql = "SELECT email, pass FROM user WHERE email = '$email' AND pass='$pass'";
+            $user = $bd->query($sql);
+
+            if ($user->rowCount() > 0) {
+                
+                session_start();
+                $_SESSION["email"] = $email;
+                header("Location: index.php");
+            } else {
+                $sql = "SELECT email, pass FROM user WHERE email = '$email'";
+                $users = $bd->query($sql);
+                $user = $users->fetch(PDO::FETCH_ASSOC);
+                    
+                if($user == true){  
+
+                    if (password_verify($pass, $user['pass'])) {  
+                        session_start();
+                        $_SESSION['email'] = $email;
+                        header("Location: index.php");
+                    } else {
+                        echo 'Contraseña incorrecta';
+                    }
+                }else {
+                    echo 'Email incorrecto';
+                }
+            }
+        }
+    }catch(Exception $e){
+        echo "Error $e";
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,14 +60,20 @@
                     <div class="form-group separate">
                         <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
                         <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
-                        <input name="emailLogin" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email">
+                        <input name="email" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email" value="<?php if(isset($email)) echo $email;?>">
                         <span id="passwordIcon"><i class="fa-solid fa-key"></i></span>
-                        <input name="passLogin" type="password" class="form-control inputLogin" id="passLogin" placeholder="Contraseña" minlength="6">
+                        <input name="pass" type="password" class="form-control inputLogin" id="passLogin" placeholder="Contraseña" minlength="6">
                     </div>
                 </div>
                 <div class="text-center"> 
                     <button type="submit" class="btn btn-dark buttonLogin">Iniciar sesión</button>
                 </div>
+                <?php if(isset($_GET["noLogin"])){      
+                    echo "<p>Haga login para continuar</p>";
+                }?>
+                <?php if(isset($err) and $err == true){   
+                    echo "<p>Usuario o contraseña incorrecta</p>";
+                }?>
             </form>
             <a href="#" id="forget">¿Has olvidado la contraseña?</a>
         </div>

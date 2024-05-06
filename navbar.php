@@ -36,6 +36,11 @@
         </ul>
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <?php session_start();
+            if(!isset($_SESSION['email'])){	
+                header("Location: login.php?noLogin=true");
+            }
+            echo $_SESSION['email']; ?>
           <li class="nav-item">
             <a href="login.php"><button type="button" class="btn text-light loginButton me-1">LOGIN</button></a>
           </li>
