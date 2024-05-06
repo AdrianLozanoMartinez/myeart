@@ -11,11 +11,11 @@
 <body>
     <div class="containerLogin">
         <div id="login">
-            <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
             <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="form-group separate">
                     <div class="form-group separate">
+                        <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
                         <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
                         <input name="emailLogin" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email">
                         <span id="passwordIcon"><i class="fa-solid fa-key"></i></span>
