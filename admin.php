@@ -1,4 +1,10 @@
-<?php include 'navbar.php' ?>
+<?php include 'navbar.php';
+session_start();
+if(!isset($_SESSION['email'])){	
+    header("Location: login.php?noLogin=true");
+}
+echo $_SESSION['email']; 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
