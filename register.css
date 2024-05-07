@@ -1,21 +1,19 @@
-.containerLogin {
+.containerLogin, .containerRegister {
     background-image: url('image/bg-woman.webp');
-    background-attachment: fixed;
     background-position: top 100% left 100em;
     width: 100%;
     height: 46em;
     padding: 5em;
 }
 
-#login {
-    position: fixed;
+#login, #register {
     background-color: rgb(3, 4, 11);
     box-shadow:5px 5px 30px rgb(84, 56, 36);
     width: 35%;
-    height: 50%;
+    height: 43em;
     padding: 5em;
     margin-left: 45em;
-    margin-top: 5em;
+    margin-top: -4em;
 }
 
 .separate{
@@ -37,7 +35,7 @@ body {
     border-bottom: rgb(117, 117, 117) 2px solid;
     border-radius: 0;
     padding-bottom: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 0.5em;
     font-size: large;
     color: rgb(219, 219, 219);
 }
@@ -55,22 +53,41 @@ body {
     border-color: rgb(197, 143, 102);
 }
 
-.inputLogin::placeholder, #emailIcon, #passwordIcon {
+.inputLogin::placeholder, #emailIcon, #passwordIcon, #nameIcon, #lastnameIcon, #countryIcon, #mobileIcon, #verifyPass {
     color: rgb(219, 219, 219);
-    transition: color 0.3s ease;
 }
 
 #emailIcon, #passwordIcon {
-    position: absolute;
-    left: 54em;
+    /* position: absolute;
+    left: 54em; */
+}
+
+#nameIcon{
+    margin-top: 5em;
+}
+
+#lastnameIcon{
+    margin-top: 1em;
+}
+
+#countryIcon{
+    margin-top: 1em;
 }
 
 #emailIcon{
     margin-top: 1em;
 }
 
+#mobileIcon{
+    margin-top: 1em;
+}
+
 #passwordIcon{
-    margin-top: .5em;
+    margin-top: 1em;
+}
+
+#verifyPass{
+    margin-top: 1em;
 }
 
 #arrowLeft{
@@ -91,8 +108,7 @@ body {
 
 .buttonLogin {
     background-color: rgb(178 121 76/1) !important;
-    margin-top: 2em;
-    margin-bottom: 1em;
+    margin-top: 1em;
 }
 
 

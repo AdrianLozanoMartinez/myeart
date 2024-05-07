@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-05-2024 a las 13:59:26
+-- Tiempo de generación: 07-05-2024 a las 13:39:49
 -- Versión del servidor: 10.4.32-MariaDB
 -- Versión de PHP: 8.1.1
 
@@ -34,6 +34,31 @@ CREATE TABLE `support` (
   `messages` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `nameUser` varchar(50) NOT NULL,
+  `lastname` varchar(50) DEFAULT NULL,
+  `email` varchar(50) NOT NULL,
+  `pass` varchar(100) NOT NULL,
+  `mobile` int(11) DEFAULT NULL,
+  `country` varchar(50) DEFAULT NULL,
+  `rol` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `user`
+--
+
+INSERT INTO `user` (`id`, `nameUser`, `lastname`, `email`, `pass`, `mobile`, `country`, `rol`) VALUES
+(5, 'Adrián', 'Lozano Martínez', 'adrianlm1985@gmail.com', '$2y$10$GUkaGSVNazJAlJvnigqXGOk2BbnhIkbyAGO96wbBfeS.mA1AbOp/G', 666666666, 'España', 1),
+(6, 'Myeart', 'Org', 'myeart@myeart.org', '$2y$10$mvrkt9bo6gKVG8Aw2n9vgu506SisAJWUqsIwszOxrkQh2SpWSeBCq', 666666666, 'España', 0);
+
 --
 -- Índices para tablas volcadas
 --
@@ -45,6 +70,12 @@ ALTER TABLE `support`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indices de la tabla `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -52,7 +83,13 @@ ALTER TABLE `support`
 -- AUTO_INCREMENT de la tabla `support`
 --
 ALTER TABLE `support`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
