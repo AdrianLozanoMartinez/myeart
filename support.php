@@ -19,6 +19,7 @@ try {
                     title: '<h1>Mensaje enviado</h1>',
                     showConfirmButton: false,  
                     toast: true,
+                    timer: 1000,
                 });
             </script>";
             header('Refresh: 1.5; URL=index.php');
@@ -30,6 +31,7 @@ try {
                     title: '<h1>¡Error! Mensaje no enviado</h1>',
                     showConfirmButton: false,  
                     toast: true,
+                    timer: 1000,
                 });
             </script>";
             print_r($bd->errorinfo());

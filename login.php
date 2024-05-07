@@ -1,5 +1,6 @@
+<link rel="shortcut icon" href="image/favicon-32x32.ico" type="image/x-icon">
+<div class="nav"><?php include 'navbar.php'; ?></div>
 <?php
-    include 'bd.php';
 
     $email = "";
 
@@ -9,33 +10,40 @@
             $email = $_POST['email'];
             $pass = $_POST['pass'];
 
-            //SIN ENCRIPTAR CONTRASEÑA
-            $sql = "SELECT email, pass FROM user WHERE email = '$email' AND pass='$pass'";
-            $user = $bd->query($sql);
-
-            if ($user->rowCount() > 0) {
+            $sql = "SELECT email, pass FROM user WHERE email = '$email'";
+            $users = $bd->query($sql);
+            $user = $users->fetch(PDO::FETCH_ASSOC);
                 
-                session_start();
-                $_SESSION["email"] = $email;
-                header("Location: index.php");
-            } else {
-                $sql = "SELECT email, pass FROM user WHERE email = '$email'";
-                $users = $bd->query($sql);
-                $user = $users->fetch(PDO::FETCH_ASSOC);
-                    
-                if($user == true){  
+            if($user == true){  
 
-                    if (password_verify($pass, $user['pass'])) {  
-                        session_start();
-                        $_SESSION['email'] = $email;
-                        header("Location: index.php");
-                    } else {
-                        echo 'Contraseña incorrecta';
-                    }
-                }else {
-                    echo 'Email incorrecto';
+                if (password_verify($pass, $user['pass'])) {  
+            
+                    $_SESSION['email'] = $email;
+                    header('Refresh: 1.5; URL=index.php');
+                    exit;
+                } else {
+                    echo "<script> 
+                            Swal.fire({
+                                icon: 'error',
+                                title: '<h1>Contraseña incorrecta</h1>',
+                                showConfirmButton: false,  
+                                toast: true,
+                                timer: 1000,
+                            });
+                        </script>";
                 }
+            }else {
+                echo "<script> 
+                            Swal.fire({
+                                icon: 'error',
+                                title: '<h1>Email incorrecto</h1>',
+                                showConfirmButton: false,  
+                                toast: true,
+                                timer: 1000,
+                            });
+                        </script>";
             }
+            
         }
     }catch(Exception $e){
         echo "Error $e";
@@ -47,9 +55,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="shortcut icon" href="image/favicon-32x32.ico" type="image/x-icon">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
 </head>
 <body>
@@ -79,7 +87,6 @@
             <a href="#" id="forget">¿Has olvidado la contraseña?</a>
         </div>
     </div>
-    <!-- <a href="admin.php">Administrador (Solo para probar, luego se cambia)</a> -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
 </body>
