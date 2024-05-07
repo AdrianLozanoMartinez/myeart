@@ -13,37 +13,54 @@ try {
         $passRegister = $_POST['passRegister'];
         $verifyPass = $_POST['verifyPass'];
 
+        $sql = "SELECT email FROM user";
+        $users = $bd->query($sql);
+        $user = $users->fetch(PDO::FETCH_ASSOC);
+
         if($passRegister == $verifyPass){
 
-            if(password_hash($passRegister, PASSWORD_DEFAULT)){
+            if($user['email'] != $emailRegister){
 
-                $pass = password_hash($passRegister, PASSWORD_DEFAULT);
-                $sql = "INSERT INTO user (nameUser, lastname, email, pass, mobile, country, rol) 
-                        VALUES ('$nameRegister', '$lastnameRegister', '$emailRegister', '$pass', '$mobileRegister', '$countryRegister', '0')";
-                $usuarios = $bd->query($sql);
+                if(password_hash($passRegister, PASSWORD_DEFAULT)){
 
-                echo "<script> 
-                            Swal.fire({
-                                icon: 'success',
-                                title: '<h1>Registro completo</h1>',
-                                showConfirmButton: false,  
-                                toast: true,
-                                timer: 1000,
-                            });
+                    $pass = password_hash($passRegister, PASSWORD_DEFAULT);
+                    $sql = "INSERT INTO user (nameUser, lastname, email, pass, mobile, country, rol) 
+                            VALUES ('$nameRegister', '$lastnameRegister', '$emailRegister', '$pass', '$mobileRegister', '$countryRegister', '0')";
+                    $usuarios = $bd->query($sql);
+
+                    echo "<script> 
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: '<h1>Registro completo</h1>',
+                                    showConfirmButton: false,  
+                                    toast: true,
+                                    timer: 1000,
+                                });
+                        </script>";
+
+                    header('Refresh: 1; URL=index.php');
+                    exit;
+                } else {
+                    echo "<script> 
+                        Swal.fire({
+                            icon: 'error',
+                            title: '<h1>Registro fallido</h1>',
+                            showConfirmButton: false,  
+                            toast: true,
+                            timer: 1500,
+                        });
                     </script>";
-
-                header('Refresh: 1; URL=index.php');
-                exit;
-            } else {
+                }
+            } else{
                 echo "<script> 
-                    Swal.fire({
-                        icon: 'error',
-                        title: '<h1>Registro fallido</h1>',
-                        showConfirmButton: false,  
-                        toast: true,
-                        timer: 1500,
-                    });
-                </script>";
+                        Swal.fire({
+                            icon: 'error',
+                            title: '<h1>El email ya existe</h1>',
+                            showConfirmButton: false,  
+                            toast: true,
+                            timer: 1500,
+                        });
+                    </script>";
             }
         } else {
             echo "<script> 
