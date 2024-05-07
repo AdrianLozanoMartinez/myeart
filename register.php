@@ -100,19 +100,19 @@ try {
                         <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
                         <br>
                         <span id="nameIcon"><i class="fa-solid fa-user  fa-lg"></i></i></span>
-                        <input required name="nameRegister" type="text" class="form-control inputRegister" id="nameRegister" placeholder="Nombre" minlength="2">
+                        <input required name="nameRegister" type="text" class="form-control inputRegister" id="nameRegister" placeholder="Nombre" minlength="2"  autocomplete="new-password">
                         <span id="lastnameIcon"><i class="fa-solid fa-user  fa-lg"></i></i></span>
-                        <input required name="lastnameRegister" type="text" class="form-control inputRegister" id="lastnameRegister" placeholder="Apellidos" minlength="2">
+                        <input required name="lastnameRegister" type="text" class="form-control inputRegister" id="lastnameRegister" placeholder="Apellidos" minlength="2"  autocomplete="new-password">
                         <span id="countryIcon"><i class="fa-solid fa-earth-americas  fa-lg"></i></i></span>
-                        <input required name="countryRegister" type="text" class="form-control inputRegister" id="countryRegister" placeholder="País" minlength="3">
+                        <input required name="countryRegister" type="text" class="form-control inputRegister" id="countryRegister" placeholder="País" minlength="3"  autocomplete="new-password">
                         <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
-                        <input required name="emailRegister" type="email" class="form-control inputRegister" id="emailRegister" placeholder="Email">
+                        <input required name="emailRegister" type="email" class="form-control inputRegister" id="emailRegister" placeholder="Email"  autocomplete="new-password">
                         <span id="mobileIcon"><i class="fa-solid fa-mobile-screen-button  fa-lg"></i></span>
-                        <input name="mobileRegister" type="number" class="form-control inputRegister" id="mobileRegister" placeholder="Móvil" minlength="9">
+                        <input name="mobileRegister" type="number" class="form-control inputRegister" id="mobileRegister" placeholder="Móvil" minlength="9"  autocomplete="new-password">
                         <span id="passwordIcon"><i class="fa-solid fa-key fa-lg"></i></span>
-                        <input required name="passRegister" type="password" class="form-control inputRegister" id="passRegister" placeholder="Contraseña" minlength="6">
+                        <input required name="passRegister" type="password" class="form-control inputRegister" id="passRegister" placeholder="Contraseña" minlength="6" autocomplete="new-password">
                         <span id="verifyPass"><i class="fa-solid fa-key fa-lg"></i></span>
-                        <input required name="verifyPass" type="password" class="form-control inputRegister" id="verifyPass" placeholder="Verificar contraseña" minlength="6">
+                        <input required name="verifyPass" type="password" class="form-control inputRegister" id="verifyPass" placeholder="Verificar contraseña" minlength="6"  autocomplete="new-password">
                     </div>
                 </div>
                 <div class="text-center"> 
