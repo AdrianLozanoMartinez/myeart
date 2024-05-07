@@ -19,7 +19,7 @@
                 if (password_verify($pass, $user['pass'])) {  
             
                     $_SESSION['email'] = $email;
-                    header('Refresh: 1.5; URL=index.php');
+                    header("Location: index.php");
                     exit;
                 } else {
                     echo "<script> 
