@@ -15,15 +15,23 @@ try {
         if ($supports->rowCount() > 0) {
             echo "<script> 
                 Swal.fire({
+                    icon: 'success',
                     title: '<h1>Mensaje enviado</h1>',
                     showConfirmButton: false,  
+                    toast: true,
                 });
             </script>";
-            // Redireccionamos después de un breve retraso
             header('Refresh: 1.5; URL=index.php');
             exit;
         } else {
-            echo "Envío del mensaje incorrecto";
+            echo "<script> 
+                Swal.fire({
+                    icon: 'error',
+                    title: '<h1>¡Error! Mensaje no enviado</h1>',
+                    showConfirmButton: false,  
+                    toast: true,
+                });
+            </script>";
             print_r($bd->errorinfo());
         }
     }
