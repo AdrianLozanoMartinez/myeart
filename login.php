@@ -69,7 +69,7 @@
                     <div class="form-group separate">
                         <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
                         <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
-                        <input name="email" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email" value="<?php if(isset($email)) echo $email;?>"  autocomplete="new-password">
+                        <input name="email" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email"  autocomplete="new-password">
                         <span id="passwordIcon"><i class="fa-solid fa-key"></i></span>
                         <input name="pass" type="password" class="form-control inputLogin" id="passLogin" placeholder="Contraseña" minlength="6" autocomplete="new-password">
                     </div>
