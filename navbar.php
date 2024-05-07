@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+  <link rel="shortcut icon" href="image/favicon-32x32.ico" type="image/x-icon">
 </head>
 <body>
   <nav class="navbar navbar-expand-lg">
@@ -37,15 +38,22 @@
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <?php session_start();
-          if(isset($_SESSION['email'])){	
-              echo $_SESSION['email']; 
-           } ?>
+          if(isset($_SESSION['email'])){	?> 
+          <!-- <p class="letter"><?php //echo $_SESSION['email']; ?></p> -->
+          <li class="nav-item icon">
+            <a href="admin.php"><i class="fa-solid fa-user fa-2x"></i></a>
+          </li>
           <li class="nav-item">
-            <a href="login.php"><button type="button" class="btn text-light loginButton me-1">LOGIN</button></a>
+            <a href="logout.php" class="out"><button type="button" class="btn text-light loginButton me-1">Salir</button></a>
           </li>
-          <li class="nav-item me-5">
-            <a href="register.php"><button type="button" class="btn text-light loginButton me-5">REGISTRAR</button></a>
-          </li>
+          <?php } else{?>
+              <li class="nav-item">
+                <a href="login.php"><button type="button" class="btn text-light loginButton me-1">LOGIN</button></a>
+              </li>
+              <li class="nav-item me-5">
+                <a href="register.php"><button type="button" class="btn text-light loginButton me-5">REGISTRAR</button></a>
+              </li>
+          <?php } ?>
         </ul>
     </div>
   </nav>

@@ -112,3 +112,21 @@ footer{
 .inputSupport:hover {
     box-shadow: 2px 2px 2px 1px rgb(197, 143, 102);
 }
+
+.letter{
+    color: rgb(219, 219, 219);
+}
+
+.fa-user{
+    font-weight:lighter;
+    color: rgb(219, 219, 219);
+}
+
+.icon {
+    margin-right: 1em;
+    margin-top: 0.5em;
+}
+
+.out{
+    margin-right: 2em;
+}
