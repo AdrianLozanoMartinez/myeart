@@ -1,4 +1,4 @@
-.containerLogin, .containerRegister {
+.containerRegister, .containerRegister {
     background-image: url('image/bg-woman.webp');
     background-position: top 100% left 100em;
     width: 100%;
@@ -6,21 +6,21 @@
     padding: 5em;
 }
 
-#login, #register {
+#register, #register {
     background-color: rgb(3, 4, 11);
     box-shadow:5px 5px 30px rgb(84, 56, 36);
     width: 35%;
-    height: 43em;
+    height: 35em;
     padding: 5em;
     margin-left: 45em;
-    margin-top: -4em;
+    /* margin-top: -4em; */
 }
 
 .separate{
     margin-top: -2em;
 }
 
-#login:hover {
+#register:hover {
     box-shadow:5px 5px 30px rgb(197, 143, 102);
 }
 
@@ -28,19 +28,22 @@ body {
     background-color: rgb(3, 4, 11);
 }
 
-.inputLogin {
+.inputRegister {
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
     background-color: rgba(0, 0, 0, 0.2);
     border: 0;
     border-bottom: rgb(117, 117, 117) 2px solid;
     border-radius: 0;
-    padding-bottom: 1em;
-    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em;
+    margin-bottom: 1em;
+    margin-top: -1.7em;
+    margin-left: 1em;
     font-size: large;
     color: rgb(219, 219, 219);
 }
 
-.inputLogin:focus, .inputLogin:hover {
+.inputRegister:focus, .inputRegister:hover {
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0px 2px 4px rgba(197, 143, 102, 0.5); /* Desplazamiento vertical de 2px */
     border: 0;
@@ -48,65 +51,30 @@ body {
 }
 
 
-.buttonLogin:hover {
+.buttonRegister:hover {
     background-color: rgb(197, 143, 102) !important;
     border-color: rgb(197, 143, 102);
 }
 
-.inputLogin::placeholder, #emailIcon, #passwordIcon, #nameIcon, #lastnameIcon, #countryIcon, #mobileIcon, #verifyPass {
+.inputRegister::placeholder, #emailIcon, #passwordIcon, #nameIcon, #lastnameIcon, #countryIcon, #mobileIcon, #verifyPass {
     color: rgb(219, 219, 219);
 }
 
-#emailIcon, #passwordIcon {
-    /* position: absolute;
-    left: 54em; */
-}
-
-#nameIcon{
-    margin-top: 5em;
-}
-
-#lastnameIcon{
-    margin-top: 1em;
-}
-
-#countryIcon{
-    margin-top: 1em;
-}
-
-#emailIcon{
-    margin-top: 1em;
-}
-
-#mobileIcon{
-    margin-top: 1em;
-}
-
-#passwordIcon{
-    margin-top: 1em;
-}
-
-#verifyPass{
-    margin-top: 1em;
-}
+/* #nameIcon, #lastnameIcon, #countryIcon, #emailIcon, #mobileIcon, #passwordIcon, #verifyPass{
+    position: absolute;
+    margin-top: 0.5em;
+} */
 
 #arrowLeft{
     color: rgb(178 121 76/1);
     margin-left: -3em;
 }
 
-#forget{
-    margin-left: 5em;
-    color: rgb(184, 183, 183);
-    text-decoration: none;
-    font-weight: bold;
-}
-
 #forget:hover{
     color: rgb(197, 143, 102);
 }
 
-.buttonLogin {
+.buttonRegister {
     background-color: rgb(178 121 76/1) !important;
     margin-top: 1em;
 }

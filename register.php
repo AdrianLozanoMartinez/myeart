@@ -44,30 +44,31 @@ try {
 </head>
 <body>
     <div class="containerRegister">
-        <div id="login">
+        <div id="register">
             <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="form-group separate">
                     <div class="form-group separate">
                         <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
+                        <br>
                         <span id="nameIcon"><i class="fa-solid fa-user  fa-lg"></i></i></span>
-                        <input name="nameRegister" type="text" class="form-control inputLogin" id="nameRegister" placeholder="Nombre" minlength="2">
+                        <input name="nameRegister" type="text" class="form-control inputRegister" id="nameRegister" placeholder="Nombre" minlength="2">
                         <span id="lastnameIcon"><i class="fa-solid fa-user  fa-lg"></i></i></span>
-                        <input name="lastnameRegister" type="text" class="form-control inputLogin" id="lastnameRegister" placeholder="Apellidos" minlength="2">
+                        <input name="lastnameRegister" type="text" class="form-control inputRegister" id="lastnameRegister" placeholder="Apellidos" minlength="2">
                         <span id="countryIcon"><i class="fa-solid fa-earth-americas  fa-lg"></i></i></span>
-                        <input name="countryRegister" type="text" class="form-control inputLogin" id="countryRegister" placeholder="País" minlength="3">
+                        <input name="countryRegister" type="text" class="form-control inputRegister" id="countryRegister" placeholder="País" minlength="3">
                         <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
-                        <input name="emailRegister" type="email" class="form-control inputLogin" id="emailRegister" placeholder="Email">
+                        <input name="emailRegister" type="email" class="form-control inputRegister" id="emailRegister" placeholder="Email">
                         <span id="mobileIcon"><i class="fa-solid fa-mobile-screen-button  fa-lg"></i></span>
-                        <input name="mobileRegister" type="number" class="form-control inputLogin" id="mobileRegister" placeholder="Móvil" minlength="9">
-                        <span id="passwordIcon"><i class="fa-solid fa-key  fa-lg"></i></span>
-                        <input name="passRegister" type="password" class="form-control inputLogin" id="passRegister" placeholder="Contraseña" minlength="6">
-                        <span id="verifyPass"><i class="fa-solid fa-key  fa-lg"></i></span>
-                        <input name="verifyPass" type="password" class="form-control inputLogin" id="verifyPass" placeholder="Verificar contraseña" minlength="6">
+                        <input name="mobileRegister" type="number" class="form-control inputRegister" id="mobileRegister" placeholder="Móvil" minlength="9">
+                        <span id="passwordIcon"><i class="fa-solid fa-key fa-lg"></i></span>
+                        <input name="passRegister" type="password" class="form-control inputRegister" id="passRegister" placeholder="Contraseña" minlength="6">
+                        <span id="verifyPass"><i class="fa-solid fa-key fa-lg"></i></span>
+                        <input name="verifyPass" type="password" class="form-control inputRegister" id="verifyPass" placeholder="Verificar contraseña" minlength="6">
                     </div>
                 </div>
                 <div class="text-center"> 
-                    <button type="submit" class="btn btn-dark buttonLogin">Registrarse</button>
+                    <button type="submit" class="btn btn-dark buttonRegister">Registrarse</button>
                 </div>
             </form>
         </div>
