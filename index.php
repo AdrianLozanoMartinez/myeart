@@ -9,9 +9,9 @@
 </head>
 <body>
     <div class="containerPolicy">
-        Principal - EN CONSTRUCCIÓN
+        <input type="text" name="search" id="search" placeholder="Introduzca el nombre para buscar">
     </div>
+    <div class="show"></div> 
     <?php include 'footer.html' ?>
-
 </body>
 </html>

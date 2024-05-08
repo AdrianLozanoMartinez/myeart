@@ -15,11 +15,4 @@ try {
 } catch(PDOException $e) {
     echo "Error de conexión: " . $e->getMessage();
 }
-
-$sqlSupport = 'SELECT * FROM support';
-try {
-    $supports = $bd->query($sqlSupport);
-} catch(PDOException $e) {
-    echo "Error al ejecutar la consulta: " . $e->getMessage();
-}
 ?>

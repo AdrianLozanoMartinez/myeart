@@ -3,6 +3,13 @@ if(!isset($_SESSION['email'])){
     header("Location: login.php?noLogin=true");
 }
 echo $_SESSION['email']; 
+
+$sqlSupport = 'SELECT * FROM support';
+try {
+    $supports = $bd->query($sqlSupport);
+} catch(PDOException $e) {
+    echo "Error al ejecutar la consulta: " . $e->getMessage();
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
