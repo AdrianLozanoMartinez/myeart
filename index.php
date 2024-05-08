@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Myeart</title>
-
 </head>
 <body>
     <div class="containerPolicy">
-        <input type="text" name="search" id="search" placeholder="Introduzca el nombre para buscar">
+        <input type="text" name="search" id="search" placeholder="Busque el nombre de la obra o artísta">
+        <div class="show"></div> 
     </div>
-    <div class="show"></div> 
     <?php include 'footer.html' ?>
+    <script src="script.js"></script>
 </body>
 </html>
