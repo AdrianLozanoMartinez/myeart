@@ -1,4 +1,15 @@
-<?php include 'bd.php'; ?>
+<?php include 'bd.php'; 
+
+session_start();
+
+if(isset($_SESSION['email'])) {
+  $email = $_SESSION['email'];
+
+  $sqlUser ="SELECT rol FROM user WHERE email = '$email'"; 
+  $sqlRol = $bd->query($sqlUser);
+  $rol = $sqlRol->fetch();
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,22 +48,24 @@
         </ul>
       </div>
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <?php session_start();
-          if(isset($_SESSION['email'])){	?> 
-          <!-- <p class="letter"><?php //echo $_SESSION['email']; ?></p> -->
           <li class="nav-item icon">
-            <a href="admin.php"><i class="fa-solid fa-user fa-2x"></i></a>
+            <?php if(isset($rol['rol'])) { 
+                   if($rol['rol'] == 1){ ?>
+                      <a href="admin.php"><i class="fa-solid fa-user fa-2x"></i></a>
+            <?php  }else{ ?>
+                      <a href="profile.php"><i class="fa-solid fa-user fa-2x"></i></a>
+                  <?php } ?>
+                  <li class="nav-item">
+                    <a href="logout.php" class="out"><button type="button" class="btn text-light loginButton me-1">Salir</button></a>
+                  </li>
+            <?php } else { ?>
           </li>
           <li class="nav-item">
-            <a href="logout.php" class="out"><button type="button" class="btn text-light loginButton me-1">Salir</button></a>
+            <a href="login.php"><button type="button" class="btn text-light loginButton me-1">LOGIN</button></a>
           </li>
-          <?php } else{?>
-              <li class="nav-item">
-                <a href="login.php"><button type="button" class="btn text-light loginButton me-1">LOGIN</button></a>
-              </li>
-              <li class="nav-item me-5">
-                <a href="register.php"><button type="button" class="btn text-light loginButton me-5">REGISTRAR</button></a>
-              </li>
+          <li class="nav-item me-5">
+            <a href="register.php"><button type="button" class="btn text-light loginButton me-5">REGISTRAR</button></a>
+          </li>
           <?php } ?>
         </ul>
     </div>
