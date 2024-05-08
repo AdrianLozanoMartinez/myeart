@@ -1,7 +1,5 @@
 body{
     background-image: url('image/bg-woman.webp');
-    background-attachment: fixed;
-    background-position: top 90% right 110em;
 }
 
 .logoNavbar{

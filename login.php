@@ -62,15 +62,13 @@
 </head>
 <body>
     <div class="containerLogin">
+        <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left fa-2x"></i></span></a>
         <div id="login">
             <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
                 <input type="hidden" name="id" value="<?php echo $id; ?>">
                 <div class="form-group separate">
                     <div class="form-group separate">
-                        <a href="index.php" id="arrowLeft"><span><i class="fa-solid fa-arrow-left"></i></span></a>
-                        <span id="emailIcon"><i class='fa-regular fa-envelope fa-lg'></i></span>
                         <input name="email" type="email" class="form-control inputLogin" id="emailLogin" placeholder="Email"  autocomplete="new-password">
-                        <span id="passwordIcon"><i class="fa-solid fa-key"></i></span>
                         <input name="pass" type="password" class="form-control inputLogin" id="passLogin" placeholder="Contraseña" minlength="6" autocomplete="new-password">
                     </div>
                 </div>
